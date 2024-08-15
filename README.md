@@ -1,16 +1,14 @@
-## Hi there 👋
+# Olá, eu sou o Eduardo Ciochetti Toste! 👋
 
-<!--
-**eduardo-toste/eduardo-toste** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Sou um desenvolvedor Fullstack Jr. com uma paixão por criar soluções eficientes e inovadoras. Com experiência em diversas tecnologias, estou sempre em busca de aprender mais e enfrentar novos desafios.
 
-Here are some ideas to get you started:
+## 🚀 Sobre Mim
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 🎓 Formado em Análise e Desenvolvimento de Sistemas na FACENS.
+- 💻 Experiência com desenvolvimento, infraestrutura e banco de dados.
+- 🧠 Sempre aprendendo algo novo, com foco em desenvolvimento web.
+- 📚 Apaixonado por tecnologia, inovação e resolver problemas através de código.
+
+## 📈 Estatísticas do GitHub
+
+![Eduardo's GitHub Stats](https://github-readme-stats.vercel.app/api?username=eduardo-toste&show_icons=true&theme=algolia)
