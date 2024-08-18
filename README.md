@@ -11,5 +11,7 @@ Sou um desenvolvedor Fullstack Jr. com uma paixão por criar soluções eficient
 
 ## 📈 Estatísticas do GitHub
 
-![Eduardo's GitHub Stats](https://github-readme-stats.vercel.app/api?username=eduardo-toste&show_icons=true&theme=algolia)
+<div align='center'>
+<img width="400em" src="https://github-readme-stats.vercel.app/api?username=eduardo-toste&show_icons=true&theme=algolia" alt="Eduardo's stats"/>
 <img width="400em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eduardo-toste&layout=compact&theme=algolia" alt="Eduardo's most languages"/>
+</div>
