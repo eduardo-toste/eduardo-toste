@@ -5,5 +5,9 @@
 <p>👨‍💻 Quality Assurance
 <p>📚 Backend Java
 <hr>
-  
-[![My Skills](https://skillicons.dev/icons?i=java,spring,selenium,nodejs,javascript,typescript,react,postgresql,mysql,figma,docker,postman)](https://skillicons.dev)
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=java,spring,selenium,nodejs,javascript,typescript,react,postgresql,mysql,figma,docker,postman" />
+  </a>
+</p>
