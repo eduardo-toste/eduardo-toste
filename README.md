@@ -6,4 +6,4 @@
 <p>📚 Backend Java
 <hr>
   
-[![My Skills](https://skillicons.dev/icons?i=java,spring,nodejs,javascript,typescript,react,postgresql,mysql,figma,docker,postman)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,spring,selenium,nodejs,javascript,typescript,react,postgresql,mysql,figma,docker,postman)](https://skillicons.dev)
