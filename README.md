@@ -50,7 +50,6 @@
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=eduardo-toste&locale=en&hide_title=false&layout=compact&card_width=400&langs_count=8&theme=nightowl&hide_border=true" height="250" alt="languages graph" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=eduardo-toste&radius=16&theme=nightowl&area=true&hide_border=true&custom_title=Contribution%20Graph" height="250" alt="activity graph" />
 </div>
 
 ###
