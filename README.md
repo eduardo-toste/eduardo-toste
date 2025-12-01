@@ -43,13 +43,3 @@
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=maven" height="40" alt="apachemaven logo"  />
 </div>
-
-###
-
-<h2 align="left">Stats</h2>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=eduardo-toste&locale=en&hide_title=false&layout=compact&card_width=400&langs_count=8&theme=nightowl&hide_border=true" height="250" alt="languages graph" />
-</div>
-
-###
