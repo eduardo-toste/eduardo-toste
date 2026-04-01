@@ -32,11 +32,3 @@
 [![MAVEN](https://img.shields.io/badge/maven-000000?style=for-the-badge&logo=apachemaven&logoColor=white)]()
 
 </div>
-
-<h2 align="left">GitHub Stats</h2>
-
-<div align="center">
-
-![](https://nirzak-streak-stats.vercel.app/?user=eduardo-toste&theme=dark&hide_border=false)
-
-</div>
