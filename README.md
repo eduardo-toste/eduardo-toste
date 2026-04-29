@@ -37,6 +37,6 @@
 
 <div align="center">
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=eduardo-toste&theme=dark&date_format=j%2Fn%5B%2FY%5D&card_width=800&card_height=200)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=eduardo-toste&theme=dark&date_format=j%2Fn%5B%2FY%5D&card_width=700&card_height=190)](https://git.io/streak-stats)
 
 </div>
