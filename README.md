@@ -32,3 +32,11 @@
 [![MAVEN](https://img.shields.io/badge/maven-000000?style=for-the-badge&logo=apachemaven&logoColor=white)]()
 
 </div>
+
+<h2 align="left">Commits</h2>
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=eduardo-toste&theme=dark&date_format=j%2Fn%5B%2FY%5D&card_width=800&card_height=200)](https://git.io/streak-stats)
+
+</div>
