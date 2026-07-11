@@ -14,7 +14,7 @@
 
 | Category | Technologies |
 |---|---|
-| **Backend** | Java 11+, Java 21, Spring Boot, Spring Web, Spring Data JPA, Spring Security, Hibernate, Node.js, TypeScript |
+| **Backend** | Java 11+, Spring Boot, Spring Web, Spring Data JPA, Spring Security, Hibernate, Node.js, TypeScript |
 | **APIs & Security** | REST, OpenAPI/Swagger, JWT, Authentication, Authorization, Service Integration |
 | **Architecture** | Layered Architecture, Hexagonal, Clean Architecture, Microservices, Clean Code, SOLID |
 | **Messaging** | Kafka, RabbitMQ |
