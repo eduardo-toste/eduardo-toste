@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200" viewBox="0 0 1000 200" role="img" aria-label="Eduardo - Software Engineer - Backend and DevOps">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.5" stop-color="#20262e"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="420" y1="0" x2="580" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8b949e" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#8b949e" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#8b949e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="200" rx="10" fill="url(#bg)"/>
+
+  <text x="500" y="92" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="46" font-weight="700" letter-spacing="-0.5" fill="#e6edf3">
+    Hey there! I'm Eduardo
+  </text>
+
+  <rect x="420" y="118" width="160" height="1" fill="url(#rule)"/>
+
+  <text x="500" y="150" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="13" font-weight="500" letter-spacing="3.6" fill="#8b949e">
+    SOFTWARE ENGINEER · BACKEND &amp; DISTRIBUTED SYSTEMS · DEVOPS
+  </text>
+</svg>
