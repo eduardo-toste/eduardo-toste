@@ -1,15 +1,10 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner.svg">
     <img src="./assets/banner-light.svg" alt="Eduardo — Software Engineer, Backend & DevOps" width="100%">
   </picture>
 </p>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/eduardo-toste">
-    <img src="https://img.shields.io/badge/LinkedIn-1f2328?style=for-the-badge&logo=linkedin&logoColor=4D9BE0" alt="LinkedIn">
-  </a>
-</p>
 
 
 ## About Me
