@@ -20,7 +20,7 @@ Backend Software Engineer focused on **distributed systems, event-driven archite
 
 <br>
 
-<h2 align="center">Tech Stack</h2>
+<h2 align="left">Tech Stack</h2>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-1f2328?style=for-the-badge&logo=openjdk&logoColor=ED8B00" alt="Java">
@@ -40,7 +40,7 @@ Backend Software Engineer focused on **distributed systems, event-driven archite
 </p>
 
 <details>
-<summary><strong>See the full stack →</strong></summary>
+<summary><strong>See the full stack ↓</strong></summary>
 
 <br>
 
