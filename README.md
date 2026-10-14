@@ -1,46 +1,33 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner.svg">
-    <img src="./assets/banner-light.svg" alt="Eduardo — Software Engineer, Backend & DevOps" width="100%">
-  </picture>
-</p>
+<div align="center">
 
+<h3><code>eduardo@github ~ $ ./contributions.sh</code></h3>
 
+<img src="./contrib-heatmap.svg" width="860" alt="Contributions in the last 12 months" />
 
-## About Me
+<br><br>
 
-Backend Software Engineer focused on **distributed systems, event-driven architecture and DevOps practices** — from design to production operations.
+<h3><code>eduardo@github ~ $ whoami</code></h3>
 
-- I build reliable, scalable backend services with **Java 11+ and Spring Boot** (Web, Data JPA, Security), plus **Node.js/TypeScript**.
-- I apply **Clean Architecture, Hexagonal, SOLID and Clean Code** to write maintainable, evolutionary systems.
-- I design **event-driven flows with Kafka and RabbitMQ**, and model persistence across relational and NoSQL stores.
-- On the infrastructure side: **Docker, AWS, Azure, GitHub Actions and CI/CD pipelines**.
-- I treat **automated testing as engineering**, not a phase — JUnit 5, Mockito, Testcontainers and Rest Assured are part of every service I ship.
-- Systems Analysis and Development — **FACENS** · São Paulo, Brazil
+<table>
+  <tr>
+    <td valign="top"><img src="./avi-ascii.svg" width="370" alt="ASCII portrait" /></td>
+    <td valign="top"><img src="./info-card.svg" width="490" alt="Neofetch-style info card" /></td>
+  </tr>
+</table>
 
 <br>
 
-<h2 align="left">Tech Stack</h2>
+<h3><code>eduardo@github ~ $ ./links.sh</code></h3>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-1f2328?style=for-the-badge&logo=openjdk&logoColor=ED8B00" alt="Java">
-  <img src="https://img.shields.io/badge/TypeScript-1f2328?style=for-the-badge&logo=typescript&logoColor=4E9BE0" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Python-1f2328?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python">
-  <img src="https://img.shields.io/badge/Spring_Boot-1f2328?style=for-the-badge&logo=springboot&logoColor=6DB33F" alt="Spring Boot">
-  <img src="https://img.shields.io/badge/Node.js-1f2328?style=for-the-badge&logo=nodedotjs&logoColor=5FA04E" alt="Node.js">
-  <img src="https://img.shields.io/badge/Kafka-1f2328?style=for-the-badge&logo=apachekafka&logoColor=FFFFFF" alt="Apache Kafka">
-  <img src="https://img.shields.io/badge/RabbitMQ-1f2328?style=for-the-badge&logo=rabbitmq&logoColor=FF6600" alt="RabbitMQ">
-  <img src="https://img.shields.io/badge/PostgreSQL-1f2328?style=for-the-badge&logo=postgresql&logoColor=6BA5E7" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/MongoDB-1f2328?style=for-the-badge&logo=mongodb&logoColor=47A248" alt="MongoDB">
-  <img src="https://img.shields.io/badge/Redis-1f2328?style=for-the-badge&logo=redis&logoColor=FF4438" alt="Redis">
-  <img src="https://img.shields.io/badge/Docker-1f2328?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker">
-  <img src="https://img.shields.io/badge/Kubernetes-1f2328?style=for-the-badge&logo=kubernetes&logoColor=5B8DEF" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/AWS-1f2328?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS">
-  <img src="https://img.shields.io/badge/GitHub_Actions-1f2328?style=for-the-badge&logo=githubactions&logoColor=2088FF" alt="GitHub Actions">
-</p>
+<div>
+  <a href="https://www.linkedin.com/in/eduardo-toste" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=devbox&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://github.com/eduardo-toste?tab=repositories" target="_blank"><img src="https://img.shields.io/badge/-Projects-%23333?style=for-the-badge&logo=github&logoColor=white" alt="Projects"></a>
+</div>
+
+<br>
 
 <details>
-<summary><strong>See the full stack ↓</strong></summary>
+<summary><code>eduardo@github ~ $ cat stack.md</code></summary>
 
 <br>
 
@@ -58,8 +45,4 @@ Backend Software Engineer focused on **distributed systems, event-driven archite
 
 </details>
 
-<br>
-
----
-
-<p align="center">"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra</p>
+</div>

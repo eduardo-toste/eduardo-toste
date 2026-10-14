@@ -1,0 +1,40 @@
+name: Build ASCII portrait
+
+# Regenerates avi-ascii.svg from assets/photo.png (or, if that file does not
+# exist, from your GitHub avatar). Runs when the photo or the scripts change,
+# or manually from the Actions tab.
+"on":
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "assets/photo.png"
+      - "scripts/prep_photo.py"
+      - "scripts/make_ascii_svg.py"
+      - ".github/workflows/portrait.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  portrait:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pillow numpy opencv-python-headless rembg onnxruntime
+      - name: Pick source photo
+        run: |
+          if [ -f assets/photo.png ]; then
+            cp assets/photo.png /tmp/source.png
+          else
+            curl -sSL "https://github.com/${{ github.repository_owner }}.png?size=460" -o /tmp/source.png
+          fi
+      - run: python scripts/prep_photo.py /tmp/source.png
+      - run: python scripts/make_ascii_svg.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: rebuild ascii portrait [skip ci]"
+          file_pattern: "avi-ascii.svg source-prepped.png"
