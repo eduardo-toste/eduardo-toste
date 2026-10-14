@@ -10,11 +10,18 @@ name: Update profile art
 permissions:
   contents: write
 
+# shared with portrait.yml: runs queue instead of racing each other's commits
+concurrency:
+  group: profile-art
+  cancel-in-progress: false
+
 jobs:
   heatmap:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # latest main, even if another run committed while this one waited
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -23,7 +30,8 @@ jobs:
         env:
           GH_USERNAME: ${{ github.repository_owner }}
       - run: python scripts/render_heatmap_svg.py
+      - run: python scripts/make_info_card.py   # edits to the card text go live on push
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg"
+          commit_message: "chore: refresh profile art [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg"
