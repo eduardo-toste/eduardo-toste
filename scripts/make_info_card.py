@@ -40,7 +40,7 @@ FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 ROWS = [
     ("head", "eduardo@github", ""),
     ("sep", "", ""),
-    ("kv", "Role", "Backend Software Engineer"),
+    ("kv", "Role", "Software Engineer"),
     ("kv", "Company", "Itaú Unibanco"),
     ("kv", "Edu", "Systems Analysis & Dev. - FACENS"),
     ("kv", "Local", "São Paulo, Brazil"),
