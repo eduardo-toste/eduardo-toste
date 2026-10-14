@@ -18,7 +18,7 @@ import sys
 import cv2
 import numpy as np
 from PIL import Image
-from rembg import remove
+from rembg import new_session, remove
 
 OUT = "source-prepped.png"
 
@@ -28,7 +28,8 @@ def main() -> None:
     print(f"[prep] input: {src}")
 
     # 1. remove background
-    fg = remove(Image.open(src).convert("RGBA"))
+    # u2net_human_seg: small model tuned for people (newer rembg defaults to a 1GB one)
+    fg = remove(Image.open(src).convert("RGBA"), session=new_session("u2net_human_seg"))
 
     # 2. composite onto pure white
     white = Image.new("RGBA", fg.size, (255, 255, 255, 255))

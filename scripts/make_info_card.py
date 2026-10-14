@@ -41,7 +41,7 @@ ROWS = [
     ("head", "eduardo@github", ""),
     ("sep", "", ""),
     ("kv", "Role", "Backend Software Engineer"),
-    ("kv", "Company", "NTT DATA"),
+    ("kv", "Company", "Itaú Unibanco"),
     ("kv", "Edu", "Systems Analysis & Dev. - FACENS"),
     ("kv", "Local", "São Paulo, Brazil"),
     ("gap", "", ""),
