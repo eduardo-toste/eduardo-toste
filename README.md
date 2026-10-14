@@ -17,15 +17,6 @@
 
 <br>
 
-<h3><code>eduardo@github ~ $ ./links.sh</code></h3>
-
-<div>
-  <a href="https://www.linkedin.com/in/eduardo-toste" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=devbox&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://github.com/eduardo-toste?tab=repositories" target="_blank"><img src="https://img.shields.io/badge/-Projects-%23333?style=for-the-badge&logo=github&logoColor=white" alt="Projects"></a>
-</div>
-
-<br>
-
 <details>
 <summary><code>eduardo@github ~ $ cat stack.md</code></summary>
 
