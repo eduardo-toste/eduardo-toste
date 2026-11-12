@@ -1,8 +1,12 @@
 name: Update profile art
 
-# No daily schedule: runs only when something is pushed to main
-# (e.g. a README update) or when started by hand from the Actions tab.
+# The contribution heatmap is rebuilt every day, but it is NOT committed to
+# main. It is published to a separate `output` branch that is overwritten on
+# every run (always exactly one commit), and the README loads it from there.
+# So main's history only has your own commits.
 "on":
+  schedule:
+    - cron: "17 6 * * *"   # ~03:17 in São Paulo
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -10,7 +14,7 @@ name: Update profile art
 permissions:
   contents: write
 
-# shared with portrait.yml: runs queue instead of racing each other's commits
+# shared with portrait.yml: runs queue instead of racing each other
 concurrency:
   group: profile-art
   cancel-in-progress: false
@@ -21,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main   # latest main, even if another run committed while this one waited
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -30,8 +34,29 @@ jobs:
         env:
           GH_USERNAME: ${{ github.repository_owner }}
       - run: python scripts/render_heatmap_svg.py
-      - run: python scripts/make_info_card.py   # edits to the card text go live on push
-      - uses: stefanzweifel/git-auto-commit-action@v5
+
+      - name: Publish heatmap to the output branch (replaces it, no history)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          out="$RUNNER_TEMP/out"
+          mkdir -p "$out/data"
+          cp contrib-heatmap.svg "$out/"
+          cp data/contributions.json "$out/data/"
+          cd "$out"
+          git init -q -b output
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "heatmap $(date -u +%F)"
+          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
+
+      # Only when YOU push to main: if you edited the card text, rebuild the
+      # card and commit it. Daily runs never touch main.
+      - if: github.event_name == 'push'
+        run: python scripts/make_info_card.py
+      - if: github.event_name == 'push'
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh profile art [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg"
+          commit_message: "chore: rebuild info card [skip ci]"
+          file_pattern: "info-card.svg"

@@ -11,7 +11,7 @@
 
 <h3><code>eduardo@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-heatmap.svg" width="860" alt="Contributions in the last 12 months" />
+<img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/contrib-heatmap.svg" width="860" alt="Contributions in the last 12 months" />
 
 <br><br>
 
