@@ -29,11 +29,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install requests==2.32.3 beautifulsoup4==4.12.3
+      - run: pip install requests==2.32.3 beautifulsoup4==4.12.3 pillow numpy
       - run: python scripts/fetch_contributions.py
         env:
           GH_USERNAME: ${{ github.repository_owner }}
-      - run: python scripts/render_heatmap_svg.py
+      - run: python scripts/blueprint.py contrib
 
       - name: Publish heatmap to the output branch (replaces it, no history)
         env:
@@ -51,12 +51,13 @@ jobs:
           git commit -q -m "heatmap $(date -u +%F)"
           git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
 
-      # Only when YOU push to main: if you edited the card text, rebuild the
-      # card and commit it. Daily runs never touch main.
+      # Only when YOU push to main: if you edited the texts in
+      # scripts/blueprint.py, rebuild hero.svg and commit it.
+      # Daily runs never touch main.
       - if: github.event_name == 'push'
-        run: python scripts/make_info_card.py
+        run: python scripts/blueprint.py hero
       - if: github.event_name == 'push'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: rebuild info card [skip ci]"
-          file_pattern: "info-card.svg"
+          commit_message: "chore: rebuild hero [skip ci]"
+          file_pattern: "hero.svg"

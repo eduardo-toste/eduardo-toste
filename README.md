@@ -1,15 +1,8 @@
 <div align="center">
 
-<h3><code>eduardo@github ~ $ whoami</code></h3>
+<img src="./hero.svg" width="860" alt="Eduardo Toste — Software Engineer at Itaú Unibanco" />
 
-<p align="center">
-  <img src="./avi-ascii.svg" width="350" alt="ASCII portrait" />
-  <img src="./info-card.svg" width="463" alt="Neofetch-style info card" />
-</p>
-
-<br>
-
-<h3><code>eduardo@github ~ $ ./contributions.sh</code></h3>
+<br><br>
 
 <img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/contrib-heatmap.svg" width="860" alt="Contributions in the last 12 months" />
 

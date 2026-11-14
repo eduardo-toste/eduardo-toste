@@ -1,6 +1,6 @@
 name: Build ASCII portrait
 
-# Regenerates avi-ascii.svg from assets/photo.png (or, if that file does not
+# Regenerates source-prepped.png and hero.svg from assets/photo.png (or, if that file does not
 # exist, from your GitHub avatar). Runs when the photo or the scripts change,
 # or manually from the Actions tab.
 "on":
@@ -10,7 +10,7 @@ name: Build ASCII portrait
     paths:
       - "assets/photo.png"
       - "scripts/prep_photo.py"
-      - "scripts/make_ascii_svg.py"
+      - "scripts/blueprint.py"
       - ".github/workflows/portrait.yml"
 
 permissions:
@@ -39,8 +39,8 @@ jobs:
             curl -sSL "https://github.com/${{ github.repository_owner }}.png?size=460" -o /tmp/source.png
           fi
       - run: python scripts/prep_photo.py /tmp/source.png
-      - run: python scripts/make_ascii_svg.py
+      - run: python scripts/blueprint.py hero
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: rebuild ascii portrait [skip ci]"
-          file_pattern: "avi-ascii.svg source-prepped.png"
+          commit_message: "chore: rebuild portrait [skip ci]"
+          file_pattern: "hero.svg source-prepped.png"
