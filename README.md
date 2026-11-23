@@ -1,10 +1,8 @@
 <div align="center">
 
-<p align="center">
-  <img src="./hero.svg" width="860" alt="Eduardo Toste — Software Engineer at Itaú Unibanco" />
-  <br>
-  <img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/contrib-heatmap.svg?v=blueprint" width="860" alt="Contributions in the last 12 months" />
-</p>
+<img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/boot.svg" width="860" alt="EduardoApplication starting up: Software Engineer at Itaú Unibanco — Java, Spring Boot, Node.js, Kafka, RabbitMQ, PostgreSQL, Docker, Kubernetes, AWS" />
+
+<br>
 
 <details>
 <summary><code>eduardo@github ~ $ cat stack.md</code></summary>

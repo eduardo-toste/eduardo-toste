@@ -1,9 +1,10 @@
 name: Update profile art
 
-# The contribution heatmap is rebuilt every day, but it is NOT committed to
-# main. It is published to a separate `output` branch that is overwritten on
-# every run (always exactly one commit), and the README loads it from there.
-# So main's history only has your own commits.
+# The boot-log card (boot.svg) is rebuilt every day with fresh contribution
+# numbers, but it is NOT committed to main. It is published to a separate
+# `output` branch that is overwritten on every run (always exactly one
+# commit), and the README loads it from there. A push to main (e.g. after
+# editing the log texts in scripts/bootlog.py) also rebuilds it right away.
 "on":
   schedule:
     - cron: "17 6 * * *"   # ~03:17 in São Paulo
@@ -29,35 +30,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install requests==2.32.3 beautifulsoup4==4.12.3 pillow numpy
+      - run: pip install requests==2.32.3 beautifulsoup4==4.12.3 pyfiglet==1.0.2
       - run: python scripts/fetch_contributions.py
         env:
           GH_USERNAME: ${{ github.repository_owner }}
-      - run: python scripts/blueprint.py contrib
+      - run: python scripts/bootlog.py boot.svg
 
-      - name: Publish heatmap to the output branch (replaces it, no history)
+      - name: Publish to the output branch (replaces it, no history)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           out="$RUNNER_TEMP/out"
           mkdir -p "$out/data"
-          cp contrib-heatmap.svg "$out/"
+          cp boot.svg "$out/"
           cp data/contributions.json "$out/data/"
           cd "$out"
           git init -q -b output
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -q -m "heatmap $(date -u +%F)"
+          git commit -q -m "boot log $(date -u +%F)"
           git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
-
-      # Only when YOU push to main: if you edited the texts in
-      # scripts/blueprint.py, rebuild hero.svg and commit it.
-      # Daily runs never touch main.
-      - if: github.event_name == 'push'
-        run: python scripts/blueprint.py hero
-      - if: github.event_name == 'push'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: rebuild hero [skip ci]"
-          file_pattern: "hero.svg"
