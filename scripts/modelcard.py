@@ -114,7 +114,7 @@ def build():
     r2 = r1 + r1_h + GAP
     r2_h = 176
     r3 = r2 + r2_h + GAP
-    r3_h = 132
+    r3_h = 160
     H = r3 + r3_h + PAD
 
     p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
@@ -196,23 +196,22 @@ def build():
     for i, l in enumerate(["Teams building reliable backend systems",
                            "and AI-powered products: APIs, event-driven",
                            "services and integrations that scale."]):
-        p.append(txt(LX + IN, r3 + 66 + i * 23, esc(l)))
+        p.append(txt(LX + IN, r3 + 72 + i * 26, esc(l)))
 
-    p.append(card(RX, r3, CW, r3_h, "How to reach me"))
-    contacts = [("web", "Website", "duardo.tech"), ("in", "LinkedIn", "in/eduardo-toste")]
-    for i, (icon, k, v) in enumerate(contacts):
-        y = r3 + 54 + i * 37
-        ix, iy = RX + IN, y
-        p.append(f'<rect x="{ix}" y="{iy}" width="28" height="28" rx="7" fill="{T["ICON_BG"]}" stroke="{T["VSTROKE"]}"/>')
-        if icon == "web":
-            cx, cy = ix + 14, iy + 14
-            p.append(f'<g fill="none" stroke="{T["VIOLET"]}" stroke-width="1.6"><circle cx="{cx}" cy="{cy}" r="7.5"/>'
-                     f'<ellipse cx="{cx}" cy="{cy}" rx="3.4" ry="7.5"/><line x1="{cx-7.5}" y1="{cy}" x2="{cx+7.5}" y2="{cy}"/></g>')
-        else:
-            p.append(f'<text x="{ix+14}" y="{iy+19.5}" font-family="{SANS}" font-size="14" font-weight="900" '
-                     f'fill="{T["VIOLET"]}" text-anchor="middle">in</text>')
-        p.append(txt(ix + 42, iy + 19.5, esc(k), 15, T["MUT"], 600))
-        p.append(txt(RX + CW - IN, iy + 19.5, esc(v), 15.5, T["INK"], 800, "end"))
+    p.append(card(RX, r3, CW, r3_h, "Model architecture", "core stack"))
+    stack = ["Java", "Spring Boot", "Kafka", "RabbitMQ", "PostgreSQL", "MongoDB", "Docker", "Kubernetes",
+             "Redis", "AWS", "Azure", "AI integration"]
+    cx, cy = RX + IN, r3 + 54
+    for i, t in enumerate(stack):
+        w = len(t) * 7.0 + 22
+        if cx + w > RX + CW - IN:
+            cx, cy = RX + IN, cy + 34
+        hl = t == "AI integration"
+        p.append(fade(f'<rect x="{cx:.1f}" y="{cy}" width="{w:.1f}" height="27" rx="7" '
+                      f'fill="{T["VSOFT"] if hl else T["BG"]}" stroke="{T["VSTROKE"] if hl else T["CARD_LINE"]}"/>'
+                      f'<text x="{cx+w/2:.1f}" y="{cy+18.5}" font-family="{SANS}" font-size="13.5" font-weight="700" '
+                      f'fill="{T["VIOLET"] if hl else T["INK"]}" text-anchor="middle">{esc(t)}</text>', 0.9 + i * 0.05, 0.25))
+        cx += w + 7
     p.append("</svg>")
     return p
 

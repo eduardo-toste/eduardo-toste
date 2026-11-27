@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/modelcard.svg" width="860" alt="Model card — Eduardo Toste, Software &amp; AI Engineer at Itaú Unibanco. Builds backend systems, event-driven microservices and AI-powered products." />
+<img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/modelcard.svg" width="720" alt="Model card — Eduardo Toste, Software &amp; AI Engineer at Itaú Unibanco. Builds backend systems, event-driven microservices and AI-powered products." />
 
 <br>
 
-<a href="https://www.duardo.tech/"><img src="./assets/btn-website.svg" height="44" alt="Website: duardo.tech" /></a>
+<a href="https://www.duardo.tech/"><img src="./assets/btn-website.svg" height="38" alt="Website: duardo.tech" /></a>
 &nbsp;
-<a href="https://www.linkedin.com/in/eduardo-toste/"><img src="./assets/btn-linkedin.svg" height="44" alt="LinkedIn: eduardo-toste" /></a>
+<a href="https://www.linkedin.com/in/eduardo-toste/"><img src="./assets/btn-linkedin.svg" height="38" alt="LinkedIn: eduardo-toste" /></a>
 
 <details>
 <summary><b>Full tech stack</b></summary>
