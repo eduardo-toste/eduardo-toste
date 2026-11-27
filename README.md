@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/modelcard.svg" width="880" alt="Model card — Eduardo Toste, Software &amp; AI Engineer at Itaú Unibanco. Builds backend systems, event-driven microservices and AI-powered products." />
+<img src="https://raw.githubusercontent.com/eduardo-toste/eduardo-toste/output/modelcard.svg?v=wide" width="880" alt="Model card — Eduardo Toste, Software &amp; AI Engineer at Itaú Unibanco. Builds backend systems, event-driven microservices and AI-powered products." />
 
 <br>
 
