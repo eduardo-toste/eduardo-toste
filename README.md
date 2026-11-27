@@ -4,8 +4,9 @@
 
 <br>
 
-<a href="https://www.duardo.tech/"><img src="https://img.shields.io/badge/Website-duardo.tech-1d302d?style=for-the-badge&labelColor=172123" alt="Website: duardo.tech" /></a>
-<a href="https://www.linkedin.com/in/eduardo-toste/"><img src="https://img.shields.io/badge/LinkedIn-eduardo--toste-1d302d?style=for-the-badge&logo=linkedin&logoColor=8fc1ae&labelColor=172123" alt="LinkedIn: eduardo-toste" /></a>
+<a href="https://www.duardo.tech/"><img src="./assets/btn-website.svg" height="44" alt="Website: duardo.tech" /></a>
+&nbsp;
+<a href="https://www.linkedin.com/in/eduardo-toste/"><img src="./assets/btn-linkedin.svg" height="44" alt="LinkedIn: eduardo-toste" /></a>
 
 <br><br>
 
