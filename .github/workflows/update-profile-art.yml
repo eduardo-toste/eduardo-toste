@@ -1,10 +1,10 @@
 name: Update profile art
 
-# The boot-log card (boot.svg) is rebuilt every day with fresh contribution
+# The model card (modelcard.svg) is rebuilt every day with fresh contribution
 # numbers, but it is NOT committed to main. It is published to a separate
 # `output` branch that is overwritten on every run (always exactly one
 # commit), and the README loads it from there. A push to main (e.g. after
-# editing the log texts in scripts/bootlog.py) also rebuilds it right away.
+# editing the texts in scripts/modelcard.py) also rebuilds it right away.
 "on":
   schedule:
     - cron: "17 6 * * *"   # ~03:17 in São Paulo
@@ -30,11 +30,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install requests==2.32.3 beautifulsoup4==4.12.3 pyfiglet==1.0.2
+      - run: pip install requests==2.32.3 beautifulsoup4==4.12.3
       - run: python scripts/fetch_contributions.py
         env:
           GH_USERNAME: ${{ github.repository_owner }}
-      - run: python scripts/bootlog.py boot.svg
+      - run: python scripts/modelcard.py modelcard.svg dark
 
       - name: Publish to the output branch (replaces it, no history)
         env:
@@ -42,12 +42,12 @@ jobs:
         run: |
           out="$RUNNER_TEMP/out"
           mkdir -p "$out/data"
-          cp boot.svg "$out/"
+          cp modelcard.svg "$out/"
           cp data/contributions.json "$out/data/"
           cd "$out"
           git init -q -b output
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -q -m "boot log $(date -u +%F)"
+          git commit -q -m "model card $(date -u +%F)"
           git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
