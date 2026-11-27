@@ -8,8 +8,6 @@
 &nbsp;
 <a href="https://www.linkedin.com/in/eduardo-toste/"><img src="./assets/btn-linkedin.svg" height="44" alt="LinkedIn: eduardo-toste" /></a>
 
-<br><br>
-
 <details>
 <summary><b>Full tech stack</b></summary>
 
